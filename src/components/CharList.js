@@ -1,3 +1,5 @@
+import '../App.css';
+
 function CharList(props) {
   const handleInput = (e, index, wchars, setWchars) => {
     let cval = e.target.value;
@@ -18,6 +20,7 @@ function CharList(props) {
                   onChange={(e) => handleInput(e, wchar.index, props.wchars, props.setWchars)}
                   defaultValue={wchar.wc}
                   maxLength="1"
+                  className='CharInput'
                   style={{backgroundColor: wchar.color}}/>)}
     </ul>
   );
