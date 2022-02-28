@@ -9,11 +9,11 @@ function getData (setWordList, setFilterList) {
         'Accept': 'application/json'
        }
       }).then(function(response){
-        console.log(response)
+        // console.log(response)
         return response.json();
       })
       .then(function(myJson) {
-        console.log(myJson);
+        // console.log(myJson);
         let fiveC = Object.keys(myJson).filter((key) => key.length === 5);
         setWordList(fiveC);
         setFilterList(fiveC);
@@ -60,7 +60,7 @@ function App() {
     }
     let newArr = [...wchars];
     newArr[index] = newHash;
-    console.log(newArr);
+    // console.log(newArr);
     setWchars(newArr);
   }
 
